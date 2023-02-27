@@ -1,4 +1,4 @@
-import cycle_package.CycleHomework;
+import cycle_package.*;
 
 public class Main {
 	public static void main(String[] args) {
@@ -20,18 +20,20 @@ public class Main {
 		String printSecondSymbol = "0";
 		String printThirdSymbol = " ";
 
-		CycleHomework cycleHomework = new CycleHomework();
+		FullCycle fullCycle = new FullCycle();
+		ContourCycle contourCycle = new ContourCycle();
+		TriangularCycle triangularCycle = new TriangularCycle();
 
 		System.out.println(PRINT_CYCLES_TXT);
 
 		System.out.println(FIRST_EXERCISE_TXT);
-		cycleHomework.fullCycle(oneSizeCycle, twoSizeCycle, printFirstSymbol, printThirdSymbol);
+		fullCycle.fullCycle(oneSizeCycle, twoSizeCycle, printFirstSymbol, printThirdSymbol);
 
 		System.out.println(SECOND_EXERCISE_TXT);
-		cycleHomework.contourCycle(oneSizeCycle, twoSizeCycle, printFirstSymbol, printThirdSymbol, printSecondSymbol);
+		contourCycle.contourCycle(oneSizeCycle, twoSizeCycle, printFirstSymbol, printThirdSymbol, printSecondSymbol);
 
 		System.out.println(THIRD_EXERCISE_TXT);
-		cycleHomework.triangularCycle(oneSizeCycle, twoSizeCycle, printSecondSymbol, printThirdSymbol, printSecondSymbol);
+		triangularCycle.triangularCycle(oneSizeCycle, twoSizeCycle, printSecondSymbol, printThirdSymbol, printSecondSymbol);
 	}
 
 }
