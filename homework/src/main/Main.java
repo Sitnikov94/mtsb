@@ -16,11 +16,11 @@ public class Main {
 
         CycleHomework CycleHomework = new CycleHomework();
         System.out.println("PRINT CYCLES:");
-        CycleHomework.FullCycle(oneSizeCycle, twoSizeCycle, PRINT_FIRST_SYMBOL, PRINT_THIRD_SYMBOL);
+        CycleHomework.fullCycle(oneSizeCycle, twoSizeCycle, PRINT_FIRST_SYMBOL, PRINT_THIRD_SYMBOL);
         System.out.println();
-        CycleHomework.ContourCycle(oneSizeCycle, twoSizeCycle, PRINT_FIRST_SYMBOL, PRINT_THIRD_SYMBOL, PRINT_SECOND_SYMBOL);
+        CycleHomework.contourCycle(oneSizeCycle, twoSizeCycle, PRINT_FIRST_SYMBOL, PRINT_THIRD_SYMBOL, PRINT_SECOND_SYMBOL);
         System.out.println();
-        CycleHomework.TriangularCycle(oneSizeCycle, twoSizeCycle, PRINT_SECOND_SYMBOL, PRINT_THIRD_SYMBOL, PRINT_SECOND_SYMBOL);
+        CycleHomework.triangularCycle(oneSizeCycle, twoSizeCycle, PRINT_SECOND_SYMBOL, PRINT_THIRD_SYMBOL, PRINT_SECOND_SYMBOL);
     }
 }
 

@@ -17,13 +17,13 @@ public class CycleHomework {
 //
 //		CycleHomework CycleHomework = new CycleHomework();
 //		System.out.println("PRINT CYCLES:");
-//		CycleHomework.FullCycle(oneSizeCycle, twoSizeCycle, printFirstSymbol, printThirdSymbol);
+//		CycleHomework.fullCycle(oneSizeCycle, twoSizeCycle, printFirstSymbol, printThirdSymbol);
 //		System.out.println();
-//		CycleHomework.ContourCycle(oneSizeCycle, twoSizeCycle, printFirstSymbol, printThirdSymbol, printSecondSymbol);
+//		CycleHomework.contourCycle(oneSizeCycle, twoSizeCycle, printFirstSymbol, printThirdSymbol, printSecondSymbol);
 //		System.out.println();
-//		CycleHomework.TriangularCycle(oneSizeCycle, twoSizeCycle, printFirstSymbol, printThirdSymbol, printSecondSymbol);
+//		CycleHomework.triangularCycle(oneSizeCycle, twoSizeCycle, printFirstSymbol, printThirdSymbol, printSecondSymbol);
 //	}
-	public void FullCycle(int oneSizeCycle, int twoSizeCycle, String printFirstSymbol, String printThirdSymbol) {
+	public void fullCycle(int oneSizeCycle, int twoSizeCycle, String printFirstSymbol, String printThirdSymbol) {
 		System.out.println(FIRST_EXERCISE_TXT);
 		//print first cycle
 		for (int firstCounter = 0; firstCounter < oneSizeCycle; firstCounter++, System.out.println()) {
@@ -37,7 +37,7 @@ public class CycleHomework {
 		}
 	}
 
-	public void ContourCycle(int oneSizeCycle, int twoSizeCycle, String printFirstSymbol, String printThirdSymbol, String printSecondSymbol) {
+	public void contourCycle(int oneSizeCycle, int twoSizeCycle, String printFirstSymbol, String printThirdSymbol, String printSecondSymbol) {
 		System.out.println(SECOND_EXERCISE_TXT);
 		//print second cycle
 		for (firstCounter = 0; firstCounter < oneSizeCycle; firstCounter++, System.out.println()) {
@@ -53,7 +53,7 @@ public class CycleHomework {
 		}
 	}
 
-	public void TriangularCycle(int oneSizeCycle, int twoSizeCycle, String printFirstSymbol, String printThirdSymbol, String printSecondSymbol) {
+	public void triangularCycle(int oneSizeCycle, int twoSizeCycle, String printFirstSymbol, String printThirdSymbol, String printSecondSymbol) {
 		System.out.println(THIRD_EXERCISE_TXT);
 		//third first cycle
 		for (firstCounter = 0; firstCounter < oneSizeCycle; firstCounter++, System.out.println()) {
