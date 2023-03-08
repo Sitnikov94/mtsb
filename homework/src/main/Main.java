@@ -3,19 +3,17 @@ import cycle_package.CycleHomework;
 public class Main {
 	public static void main(String[] args) {
 
-		createCycle();
+		createCycle(6, 6);
 
 	}
 
-	public static void createCycle() {
+	public static void createCycle(int oneSizeCycle, int twoSizeCycle) {
 
 		final String FIRST_EXERCISE_TXT = "\n1. FIRST EXERCISE:";
 		final String SECOND_EXERCISE_TXT = "\n2. SECOND EXERCISE:";
 		final String THIRD_EXERCISE_TXT = "\n3. THIRD EXERCISE:";
 		final String PRINT_CYCLES_TXT = "\nPRINT CYCLES:";
 
-		int oneSizeCycle = 6;
-		int twoSizeCycle = 6;
 		String printFirstSymbol = "*";
 		String printSecondSymbol = "0";
 		String printThirdSymbol = " ";
