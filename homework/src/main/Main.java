@@ -23,13 +23,13 @@ public class Main {
 		System.out.println(PRINT_CYCLES_TXT);
 
 		System.out.println(FIRST_EXERCISE_TXT);
-		cycleHomework.fullCycle(oneSizeCycle, twoSizeCycle, printFirstSymbol, printThirdSymbol);
+		cycleHomework.fullCycle(oneSizeCycle, twoSizeCycle,printFirstSymbol, printThirdSymbol);
 
 		System.out.println(SECOND_EXERCISE_TXT);
 		cycleHomework.contourCycle(oneSizeCycle, twoSizeCycle, printFirstSymbol, printThirdSymbol, printSecondSymbol);
 
 		System.out.println(THIRD_EXERCISE_TXT);
-		cycleHomework.triangularCycle(oneSizeCycle, twoSizeCycle, printSecondSymbol, printThirdSymbol, printSecondSymbol);
+		cycleHomework.triangularCycle(oneSizeCycle, twoSizeCycle, printFirstSymbol, printThirdSymbol, printSecondSymbol);
 	}
 
 }
