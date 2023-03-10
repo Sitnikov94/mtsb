@@ -1,10 +1,11 @@
 import cycle_package.CycleHomework;
+import animals_package.*;
 
 public class Main {
 	public static void main(String[] args) {
 
-		createCycle(6, 6);
-
+		//createCycle(6, 6);
+		Animals();
 	}
 
 	public static void createCycle(int oneSizeCycle, int twoSizeCycle) {
@@ -32,6 +33,12 @@ public class Main {
 		cycleHomework.triangularCycle(oneSizeCycle, twoSizeCycle, printFirstSymbol, printThirdSymbol, printSecondSymbol);
 	}
 
+	public static void Animals() {
+		Animal dog1 = new Dog();
+		dog1.run(150);
+		dog1.jump(5);
+		dog1.swim(40);
+	}
 }
 
 
