@@ -1,11 +1,14 @@
-package animals_package;
+package animals_package.types;
 
-public class Dog extends Animal {
-	final static int maxDistanceRun = 500;
-	final static int maxJump = 10;
-	final static int maxSwim = 500;
+import animals_package.Animals;
+import animals_package.calculations.ResultAnimal;
+
+public class Horse extends Animals {
+	final static int maxDistanceRun = 1500;
+	final static double maxJump = 3;
+	final static int maxSwim = 100;
 	final static boolean isSwimAnimal = true;
-	final static String nameAnimal = "Пёсик";
+	final static String nameAnimal = "Лошадка";
 
 
 	@Override
@@ -14,7 +17,7 @@ public class Dog extends Animal {
 	}
 
 	@Override
-	public void jump(int distanceJumpAnimal) {
+	public void jump(double distanceJumpAnimal) {
 		System.out.println(ResultAnimal.resultJump(distanceJumpAnimal, maxJump, nameAnimal));
 	}
 
