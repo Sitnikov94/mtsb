@@ -1,4 +1,4 @@
-package cycle_package;
+package cyclesId;
 
 public class Main {
 	public static void main(String[] args) {
