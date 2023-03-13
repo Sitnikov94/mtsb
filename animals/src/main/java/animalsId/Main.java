@@ -31,5 +31,10 @@ public class Main {
 		horse1.run(10);
 		horse1.swim(10);
 		horse1.jump(10);
+
+		/*
+		Animals	абстрактный - нельзя создать самого себя
+		Animals animals = new Animals("Животное", 1, 1, 1, true);
+		*/
 	}
 }
