@@ -3,6 +3,7 @@
 .idea/
 /shelf/
 out/
+target/
 
 #Files
 /homework/*.iml

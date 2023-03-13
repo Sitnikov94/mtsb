@@ -1,10 +1,9 @@
-import cycle_package.CycleHomework;
+package cyclesId;
 
 public class Main {
 	public static void main(String[] args) {
 
 		createCycle(6, 6);
-
 	}
 
 	public static void createCycle(int oneSizeCycle, int twoSizeCycle) {
