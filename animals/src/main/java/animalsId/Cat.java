@@ -5,8 +5,7 @@ public class Cat extends Animals {
 	/*
 	 * Передаём данные в родитель
 	 */
-	public Cat() {
-		super("Котик", 200, 2, 0, false);
+	public Cat(String nameAnimal, double maxDistanceRun, double maxDistanceJump, double maxDistanceSwim, boolean isSwimAnimal) {
+		super(nameAnimal, maxDistanceRun, maxDistanceJump, maxDistanceSwim, isSwimAnimal);
 	}
-
 }

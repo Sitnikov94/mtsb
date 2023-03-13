@@ -5,8 +5,7 @@ public class Dog extends Animals {
 	/*
 	 * Передаём данные в родитель
 	 */
-	public Dog() {
-		super("Пёсик", 500, 0.5, 10, true);
+	public Dog(String nameAnimal, double maxDistanceRun, double maxDistanceJump, double maxDistanceSwim, boolean isSwimAnimal) {
+		super(nameAnimal, maxDistanceRun, maxDistanceJump, maxDistanceSwim, isSwimAnimal);
 	}
-
 }

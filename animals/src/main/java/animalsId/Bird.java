@@ -7,8 +7,9 @@ public class Bird extends Animals {
 	/*
 	 * Передаём данные в родитель
 	 */
-	public Bird() {
-		super("Птичка", 5, 0.2, 0, false);
+
+	public Bird(String nameAnimal, double maxDistanceRun, double maxDistanceJump, double maxDistanceSwim, boolean isSwimAnimal) {
+		super(nameAnimal, maxDistanceRun, maxDistanceJump, maxDistanceSwim, isSwimAnimal);
 	}
 
 	@Override
