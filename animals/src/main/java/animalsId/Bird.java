@@ -3,6 +3,7 @@ package animalsId;
 public class Bird extends Animals {
 	public final String FLY_TXT = " пролетела";
 	public final String DIDNT_FLY_TXT = " не пролетела";
+
 	/*
 	 * Передаём данные в родитель
 	 */
@@ -18,5 +19,4 @@ public class Bird extends Animals {
 			System.out.println(getNameAnimal() + DIDNT_FLY_TXT);
 		}
 	}
-
 }

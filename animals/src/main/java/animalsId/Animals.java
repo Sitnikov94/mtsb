@@ -34,8 +34,8 @@ public abstract class Animals {
 	}
 
 	/*
-	* Бегаем
-	*/
+	 * Бегаем
+	 */
 	public void run(double distanceRun) {
 		if (maxDistanceRun >= distanceRun) {
 			System.out.println(nameAnimal + RAN_TXT);
@@ -45,10 +45,10 @@ public abstract class Animals {
 	}
 
 	/*
-	* Плаваем
-	*/
+	 * Плаваем
+	 */
 	public void swim(double distanceSwim) {
-	//надо подумать
+		//надо подумать
 		if (isSwimAnimal) {
 
 			if (maxDistanceSwim >= distanceSwim) {
@@ -63,8 +63,8 @@ public abstract class Animals {
 	}
 
 	/*
-	* Прыгаем
-	*/
+	 * Прыгаем
+	 */
 	public void jump(double distanceJump) {
 		if (maxDistanceJump >= distanceJump) {
 			System.out.println(nameAnimal + JUMPED_TXT);
