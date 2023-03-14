@@ -1,4 +1,4 @@
-package animalsId;
+package animalsId1;
 
 public class Horse extends Animals {
 

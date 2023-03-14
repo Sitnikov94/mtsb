@@ -1,4 +1,4 @@
-package animalsId;
+package animalsId1;
 
 public class Bird extends Animals {
 	public final String FLY_TXT = " пролетела";
