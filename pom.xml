@@ -11,6 +11,7 @@
     <modules>
         <module>cycles</module>
         <module>animals</module>
+        <module>operations-bank</module>
     </modules>
 
     <properties>
