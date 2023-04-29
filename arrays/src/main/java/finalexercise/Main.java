@@ -18,13 +18,9 @@ public class Main {
 		};
 
 		Firm firm = new Firm(employees);
-<<<<<<< HEAD
-		firm.printInfoAllEmployyes();
-		firm.printInfoEmployyesOlderThan(40);
-=======
+
 		firm.printInfoAllEmployees();
 		firm.printInfoEmployeesOlderThan(40);
->>>>>>> 2f8bd6a (Массивы)
 		firm.changeSalary(45, 5000);
 
 	}
