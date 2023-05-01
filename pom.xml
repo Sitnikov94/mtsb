@@ -12,6 +12,7 @@
         <module>cycles</module>
         <module>animals</module>
         <module>massive</module>
+        <module>collections</module>
     </modules>
 
     <properties>
