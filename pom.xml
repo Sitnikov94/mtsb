@@ -13,6 +13,7 @@
         <module>animals</module>
         <module>massive</module>
         <module>collections</module>
+        <module>interface</module>
     </modules>
 
     <properties>
