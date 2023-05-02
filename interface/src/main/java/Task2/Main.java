@@ -18,6 +18,7 @@ public class Main {
         List<Competitors> competitors = new ArrayList<>(Arrays.asList(
                 new Human(499, 1.5, "Сергей"),
                 new Human(501, 2.6, "Игорь"),
+                new Human(550, 2.5, "Ольга"),
                 new Cat(500, 2.5, "Барсик"),
                 new Cat(654, 2.49, "Тьма"),
                 new Robot(100, 3, "R2D2")
@@ -28,28 +29,27 @@ public class Main {
                 new ChallengeRun(250),
                 new ChallengeJump(2.0),
                 new ChallengeRun(500),
-                new ChallengeJump(3.0),
+                new ChallengeJump(2.5),
                 new ChallengeRun(550)
         ));
 
-        runCompetitions(competitors, obstacles);
+        printWinner(runCompetitions(competitors, obstacles));
 
     }
 
-    public static void runCompetitions(List<Competitors> competitors, List<CompetitorsBarrier> obstacles) {
+    public static List<Competitors> runCompetitions(List<Competitors> competitors, List<CompetitorsBarrier> obstacles) {
 
         for (CompetitorsBarrier obstacle : obstacles) {
-            for (int j = 0; j < competitors.size(); j++) {
-                if (!obstacle.competitionParticipants(competitors.get(j))) {
-                    System.out.println(competitors.get(j).name() + " выбывает из соревнований!");
-                    competitors.remove(competitors.get(j));
-                    j--;
+            for (int count = 0; count < competitors.size(); count++) {
+                if (!obstacle.competitionParticipants(competitors.get(count))) {
+                    System.out.println(competitors.get(count).name() + " выбывает из соревнований!");
+                    competitors.remove(competitors.get(count));
+                    count--;
                 }
             }
         }
 
-        printWinner(competitors);
-
+        return competitors;
     }
 
     public static void printWinner(List<Competitors> competitors) {
@@ -60,9 +60,7 @@ public class Main {
             for (Competitors competitor : competitors) {
                 System.out.println(competitor.name() + " прошел(-ла) всю дистанцию!");
             }
-
         }
-
     }
 }
 
