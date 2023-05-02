@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        List<String> namesList = Arrays.asList( "get", "Get", "get", "geT", "set", "set", "SET", "get", "GET", "get");
+        List<String> namesList = Arrays.asList("get", "Get", "get", "geT", "set", "set", "SET", "get", "GET", "get");
 
         List<String> arrayList = new ArrayList<>(namesList);
 
