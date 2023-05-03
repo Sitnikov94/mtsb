@@ -1,4 +1,4 @@
-package Task2.competitors;
+package interfaceChallenge.competitors;
 
 public class Cat implements Competitors {
 

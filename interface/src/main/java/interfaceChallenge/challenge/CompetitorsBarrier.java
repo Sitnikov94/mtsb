@@ -1,6 +1,6 @@
-package Task2.challenge;
+package interfaceChallenge.challenge;
 
-import Task2.competitors.Competitors;
+import interfaceChallenge.competitors.Competitors;
 
 public interface CompetitorsBarrier {
     boolean competitionParticipants(Competitors competitor);

@@ -1,12 +1,12 @@
-package Task2;
+package interfaceChallenge;
 
-import Task2.challenge.ChallengeJump;
-import Task2.challenge.ChallengeRun;
-import Task2.challenge.CompetitorsBarrier;
-import Task2.competitors.Cat;
-import Task2.competitors.Competitors;
-import Task2.competitors.Human;
-import Task2.competitors.Robot;
+import interfaceChallenge.challenge.ChallengeJump;
+import interfaceChallenge.challenge.ChallengeRun;
+import interfaceChallenge.challenge.CompetitorsBarrier;
+import interfaceChallenge.competitors.Cat;
+import interfaceChallenge.competitors.Competitors;
+import interfaceChallenge.competitors.Human;
+import interfaceChallenge.competitors.Robot;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package Task2.competitors;
+package interfaceChallenge.competitors;
 
 public interface Competitors extends Running, Jumping {
     String name();

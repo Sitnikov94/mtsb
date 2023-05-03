@@ -1,4 +1,4 @@
-package Task2;
+package interfaceChallenge;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
