@@ -5,15 +5,20 @@ import java.util.List;
 
 public class ConsolePrinter implements Printer {
 
-    private final PrintStream output;
+	private final PrintStream output;
 
-    public ConsolePrinter() {
-        this.output = System.out;
-    }
+	public ConsolePrinter() {
+		this.output = System.out;
+	}
 
-    @Override
-    public void printToConsole(List<String> List) {
-        output.println(List);
-    }
+	@Override
+	public void printToConsole(List<String> list) {
+		list.forEach(output::println);
+	}
+
+	@Override
+	public void printToConsole(String text) {
+
+	}
 
 }

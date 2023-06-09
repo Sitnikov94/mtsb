@@ -3,6 +3,10 @@ package streamlambdaId;
 import streamlambdaId.members.Human;
 import streamlambdaId.members.Man;
 import streamlambdaId.members.Woman;
+import streamlambdaId.printer.ConsolePrinter;
+import streamlambdaId.printer.ConsolePrinterList;
+import streamlambdaId.printer.ConsolePrinterText;
+import streamlambdaId.printer.FilePrinter;
 
 import java.io.File;
 import java.io.IOException;
@@ -10,60 +14,67 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-import streamlambdaId.printer.ConsolePrinter;
-import streamlambdaId.printer.FilePrinter;
-import streamlambdaId.printer.Printer;
-
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException {
 
-        final String reportFileName = "report.txt";
+		//наименование файла
+		final String reportFileName = "competitors.txt";
+		final String COMPETITORS_RUNNER_TXT = "Участники забега:";
 
-        final int orderThan25 = 25;
-        final int orderThan20 = 20;
+		//возраст
+		final int olderThan25 = 25;
+		final int olderThan20 = 20;
+
+		List<Human> members = new ArrayList<>(List.of(
+				new Man("Сергей", 29),
+				new Woman("Анастасия", 24),
+				new Man("Андрей", 25),
+				new Woman("Анна", 26),
+				new Man("Игорь", 20),
+				new Woman("Алина", 18),
+				new Man("Антон", 20),
+				new Woman("Ольга", 25),
+				new Man("Денис", 1230),
+				new Woman("Ирина", 1)
+		));
+
+		//определяем мужчин
+		Predicate<Human> man = Human -> (Human instanceof Man);
+		//определяем из всех мужчин старше N-возраста
+		Predicate<Human> manOlderThen = Human -> Human.getAge() >= olderThan25;
+		//определяем женщин
+		Predicate<Human> woman = Human -> (Human instanceof Woman);
+		//определяем из всех женщин старше N-возраста
+		Predicate<Human> womanOlderThen = Human -> Human.getAge() >= olderThan20;
+		//сопостовляем всех мужчин и мужчин с опередленным возрастом
+		Predicate<Human> participantsMan = man.and(manOlderThen);
+		//сопостовляем всех женщин и женщин с опередленным возрастом
+		Predicate<Human> participantsWoman = woman.and(womanOlderThen);
 
 
-        List<Human> members = new ArrayList<>(List.of(
-                new Man("Сергей", 29),
-                new Woman("Анастасия", 24),
-                new Man("Андрей", 25),
-                new Woman("Анна", 26),
-                new Man("Игорь", 20),
-                new Woman("Алина", 18),
-                new Man("Антон", 20),
-                new Woman("Ольга", 25),
-                new Man("R2D2", 1230),
-                new Woman("Тьма", 1)
-        ));
+		List<String> participantsForTheRace = members.stream()
+				.filter(participantsMan.or(participantsWoman))
+				.map(Human -> Human.getName().toUpperCase())
+				.sorted()
+				.toList();
 
+		//для печати в консоль
+		ConsolePrinterText printToConsoleText = new ConsolePrinterText();
+		ConsolePrinterList printToConsoleList = new ConsolePrinterList();
+		ConsolePrinter printToConsole = new ConsolePrinter();
 
-        Predicate<Human> man = Human -> (Human instanceof Man);
-        Predicate<Human> manOrderThan = Human -> Human.getAge() >= orderThan25;
-        Predicate<Human> woman = Human -> (Human instanceof Woman);
-        Predicate<Human> womanOrderThan = Human -> Human.getAge() >= orderThan20;
+		//для печати в файл
+		File file = new File(reportFileName);
+		FilePrinter printToFile = new FilePrinter(file);
 
+		printToConsoleText.printToConsole(COMPETITORS_RUNNER_TXT);
+		//печать в консоль листом
+		printToConsoleList.printToConsole(participantsForTheRace);
+		//печать в консоль построчно
+		printToConsole.printToConsole(participantsForTheRace);
 
-        List<String> membersManOrderThan25 = new UpperNameAndSorterListAsc(members, man, manOrderThan).UpperSorterListMembers();
-        List<String> membersWomanOrderThan25 = new UpperNameAndSorterListAsc(members, woman, womanOrderThan).UpperSorterListMembers();
-
-
-        ConsolePrinter printToConsole = new ConsolePrinter();
-
-        printToConsole.printToConsole(membersManOrderThan25);
-        printToConsole.printToConsole(membersWomanOrderThan25);
-
-
-        File file = new File(reportFileName);
-        FilePrinter printToFile = new FilePrinter(file);
-
-        printToFile.filePrinter(membersManOrderThan25);
-        printToFile.filePrinter(membersWomanOrderThan25);
-
-/*
-        System.out.println(new UpperNameAndSorterListAsc(members, man, manOrderThan).UpperSorterListMembers());
-        System.out.println(new UpperNameAndSorterListAsc(members, woman, womanOrderThan).UpperSorterListMembers());
-*/
-
-    }
+		//печать в файл
+		printToFile.filePrinter(participantsForTheRace);
+	}
 }
