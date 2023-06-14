@@ -2,23 +2,40 @@ package bankId.customers;
 
 import bankId.cards.CardBank;
 
-class Customer {
+import java.util.List;
 
-	private final String fullName;
-	private final CardBank card;
-	private final String agreement;
+public class Customer {
 
-	protected Customer(String name, CardBank card, String agreement) {
-		this.fullName = name;
-		this.card = card;
-		this.agreement = agreement;
-	}
+    private final String fullName;
+    private final List<CardBank> card;
+    private final String agreement;
 
-	public String getName() {
-		return fullName;
-	}
+    public Customer(String name, List<CardBank> card, String agreement) {
+        this.fullName = name;
+        this.card = card;
+        this.agreement = agreement;
+    }
 
-	public CardBank getCard() {
-		return card;
-	}
+    public List<CardBank> getCard() {
+        return card;
+    }
+
+    public String getFullName() {
+        return fullName.toUpperCase();
+    }
+
+    public String getAgreement() {
+        return agreement;
+    }
+
+    @Override
+    public String toString() {
+        return "CUSTOMER[" + '\n' + '\t' +
+                "FULLNAME: " + getFullName() + '\n' + '\t' +
+                "AGREEMENT: " + getAgreement() + '\n' + '\t' +
+                getCard() + '\n' +
+                "]";
+    }
+
+
 }

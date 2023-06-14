@@ -36,13 +36,14 @@ public abstract class CardBank {
 
     @Override
     public String toString() {
-        return "Card[" + '\n' + '\t' +
-                "PANCARD: " + getPanCard() + '\n' + '\t' +
-                "NAMECARD: " + getNameCard() + '\n' + '\t' +
-                "ACTIVE: " + isCardActivity() + '\n' + '\t' +
-                "CARDHOLDER: " + getCardHolder() + '\n' + '\t' +
-                "BALANCE: " + getBalanceCard() + '\n' + '\t' +
-                "LIMIT: " + getLimitCard() + '\n' +
+        return
+                "\n\tCARD[" + '\n' + '\t' + '\t' +
+                "PANCARD: " + getPanCard() + '\n' + '\t' + '\t' +
+                "NAMECARD: " + getNameCard() + '\n' + '\t' + '\t' +
+                "ACTIVE: " + isCardActivity() + '\n' + '\t' + '\t' +
+                "CARDHOLDER: " + getCardHolder() + '\n' + '\t' + '\t' +
+                "BALANCE: " + getBalanceCard() + '\n' + '\t' + '\t' +
+                "LIMIT: " + getLimitCard() + '\n' + '\t' +
                 "]";
     }
 
@@ -66,11 +67,6 @@ public abstract class CardBank {
         this.balanceCard = balanceCard;
     }
 
-    //Установить наименование карты
-    public void setNameCard(String nameCard) {
-        this.nameCard = nameCard;
-    }
-
     //Получить наименование карты
     public String getNameCard() {
         return nameCard;
@@ -83,7 +79,7 @@ public abstract class CardBank {
 
     //Получить владельца карты
     public String getCardHolder() {
-        return cardHolder;
+        return cardHolder.toUpperCase();
     }
 
     //Получить лимит по карте
