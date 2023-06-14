@@ -15,6 +15,7 @@
         <module>collections</module>
         <module>interface</module>
         <module>stream_lambda</module>
+        <module>regexp</module>
     </modules>
 
     <properties>
