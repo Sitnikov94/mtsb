@@ -4,32 +4,52 @@ import bankId.cards.CardBank;
 
 public abstract class ServicesBank {
 
-    private String nameService;
-    private boolean activityService = false;
-    private CardBank card;
-    private double balance;
+	private String nameService;
+	private boolean isActivityService = false;
+	private CardBank card;
+	private double balance;
 
-    protected ServicesBank(CardBank card, double balance) {
-        this.card = card;
-        this.balance = balance;
-    }
+	protected ServicesBank(CardBank card, double priceService) {
+		this.card = card;
+		this.balance = priceService;
+	}
 
-    //Активация услуги
-    public void activateService() {
-        this.activityService = true;
-    }
+	public void activateService(){
+		boolean isBalanceFalse = card.getBalanceCard() < balance;
+		boolean isLimitFalse = card.getLimitCard() > 0 && card.getLimitCard() < balance;
+		if(isActivityService) {
+			System.out.println("Услуга " + getNameService() + " уже активирована!");
+		}
+		else if (isBalanceFalse) {
+			System.out.println("Услуга неактивирована! Недостаточный баланс!");
+		}
+		else if (isLimitFalse){
+			System.out.println("Услуга неактивирована! Превышен лимит!");
+		}
+		else {
+			isActivateService();
+		}
+	}
 
-    //Деактивация услуги
-    public void deactivationService() {
-        this.activityService = false;
-    }
+	//Активация услуги
+	public void isActivateService() {
+		this.isActivityService = true;
+		System.out.println("Услуга " + getNameService() + " активирована!");
+	}
 
-    //Вернуть статус активности
-    public boolean isActivityService() {
-        return activityService;
-    }
+	//Деактивация услуги
+	public void isDeactivationService() {
+		this.isActivityService = false;
+		System.out.println("Услуга " + getNameService() + " деактивирована!");
+	}
 
-    public String getNameService() {
-        return nameService;
-    }
+	//Вернуть статус услуги
+	public boolean isActivityService() {
+		return isActivityService;
+	}
+
+	public String getNameService() {
+		return nameService;
+	}
+
 }

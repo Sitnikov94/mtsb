@@ -3,8 +3,9 @@ package bankId.services;
 import bankId.cards.CardBank;
 
 public class Premium extends ServicesBank {
-    public Premium(CardBank card, double balance) {
-        super(card, balance);
+
+    public Premium(CardBank card, double priceService) {
+        super(card, priceService);
     }
 
     @Override

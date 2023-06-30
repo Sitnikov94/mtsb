@@ -4,14 +4,14 @@ import bankId.cards.CardBank;
 
 import java.util.List;
 
-public class Customer {
+public class Customer{
 
     private final String fullName;
     private final List<CardBank> card;
     private final String agreement;
 
-    public Customer(String name, List<CardBank> card, String agreement) {
-        this.fullName = name;
+    public Customer(String fullName, List<CardBank> card, String agreement) {
+        this.fullName = fullName;
         this.card = card;
         this.agreement = agreement;
     }

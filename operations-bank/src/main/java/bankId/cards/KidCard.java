@@ -34,8 +34,8 @@ public class KidCard extends CardBank {
     public String toString() {
         return
                 "\n\tCARD[" + '\n' + '\t' + '\t' +
+                        "CARDNAME: " + getNameCard() + '\n' + '\t' + '\t' +
                         "PANCARD: " + super.getPanCard() + '\n' + '\t' + '\t' +
-                        "NAMECARD: " + getNameCard() + '\n' + '\t' + '\t' +
                         "PARENT: " + getParent().getFullName() + '\n' + '\t' + '\t' +
                         "ACTIVE: " + super.isCardActivity() + '\n' + '\t' + '\t' +
                         "CARDHOLDER: " + super.getCardHolder() + '\n' + '\t' + '\t' +
