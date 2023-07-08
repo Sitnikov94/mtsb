@@ -24,13 +24,19 @@ public class Main {
 		Customer sitnikovs = new Customer("Ситников Сергей Сергеевич", sitnikov, "324234-23/32/23");
 
 		sitnikov.get(0).pay(200);
-		System.out.println(sitnikov.get(0));
-		sitnikov.get(0).setBalanceCard(20000);
-		System.out.println(sitnikov.get(0));
+		sitnikov.get(0).deactivationCard();
 		sitnikov.get(0).pay(200);
 		System.out.println(sitnikov.get(0));
+		sitnikov.get(0).setBalanceCard(20000);
+		sitnikov.get(0).pay(200);
+		//System.out.println(sitnikov.get(0));
 		ServicesBank sb = new Premium(sitnikov.get(0), 299);
+		sb.serviceStatus();
 		sb.activateService();
+
+		System.out.println(sitnikov);
+		//sb.activateService();
+		//sb.isDeactivationService();
 
 
 

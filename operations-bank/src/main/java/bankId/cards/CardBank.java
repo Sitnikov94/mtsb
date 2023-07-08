@@ -1,18 +1,22 @@
 package bankId.cards;
 
+import bankId.services.Premium;
+import bankId.services.ServicesBank;
+
 public abstract class CardBank {
+	public final  String SUCCESS_PAY_TXT = "Оплата прошла успешно!";
+	public final String NO_ACTIVITY_CARD_TXT = "Ваша карта не активна!";
+	public final String NO_MONEY_ON_CARD_TXT = "Недостаточно средств на карте!";
+	public final String NO_LIMIT_CARD_TXT = "Недостаточно лимита по карте!";
+	public final String ACTIVATE_CARD_TXT = getNameCard() +" активирована!";
+	public final String DEACTIVATE_CARD_TXT = getNameCard() + " деактивирована!";
 	private final String panCard;
 	private final String cardHolder;
 	private String nameCard;
 	private double limitCard = 0;
 	private double balanceCard = 0;
 	private boolean isCardActivity = true;
-	public String SUCCESS_PAY_TXT = "Оплата прошла успешно!";
-	public String NO_ACTIVITY_CARD_TXT = "Ваша карта неактивна!";
-	public String NO_MONEY_ON_CARD_TXT = "Недостаточно средств на карте!";
-	public String NO_LIMIT_CARD_TXT = "Недостаточно лимита по карте!";
-	public String ACTIVATE_CARD_TXT = "Ваша карта активирована!";
-	public String DEACTIVATE_CARD_TXT = "Ваша карте деактивирована!";
+
 
 	protected CardBank(String panCard, String cardHolder) {
 		this.panCard = panCard;
@@ -26,7 +30,6 @@ public abstract class CardBank {
 		}
 	}
 
-	// TODO: 15.06.2023 подумать над применением лимита
 	public boolean isCheckingPossibilityOfPayment(double purchaseAmount) {
 		boolean isNotMoney = getBalanceCard() < purchaseAmount;
 		boolean isNotLimit = getLimitCard() > 0 && getLimitCard() < purchaseAmount;
@@ -66,7 +69,6 @@ public abstract class CardBank {
 	public void deactivationCard() {
 		this.isCardActivity = false;
 		System.out.println(DEACTIVATE_CARD_TXT);
-
 	}
 
 	//Установить лимит
