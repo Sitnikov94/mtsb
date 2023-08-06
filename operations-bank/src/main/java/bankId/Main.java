@@ -29,20 +29,20 @@ public class Main {
 		System.out.println(sitnikov.get(0));
 		sitnikov.get(0).setBalanceCard(20000);
 		sitnikov.get(0).pay(200);
-		//System.out.println(sitnikov.get(0));
+		System.out.println(sitnikov.get(0));
 		ServicesBank sb = new Premium(sitnikov.get(0), 299);
 		sb.serviceStatus();
 		sb.activateService();
 
 		System.out.println(sitnikov);
-		//sb.activateService();
-		//sb.isDeactivationService();
+		sb.activateService();
+		sb.isDeactivationService();
 
 
 
-		//System.out.println(sitnikov);
-		//System.out.println(sitnikovs);
-		//sitnikov.add(new KidCard("8888 9999 0000 0000", "SITNIKOVA anastasia", 11, sitnikovs));
-		//System.out.println(sitnikovs);
+		System.out.println(sitnikov);
+		System.out.println(sitnikovs);
+		sitnikov.add(new KidCard("8888 9999 0000 0000", "SITNIKOVA anastasia", 11, sitnikovs));
+		System.out.println(sitnikovs);
 	}
 }
